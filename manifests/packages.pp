@@ -12,7 +12,7 @@ class openssl::packages {
       before => Package['openssl'],
     }
 
-    exec { 'update-ca-certificates':
+    exec { '/usr/sbin/update-ca-certificates':
       refreshonly => true,
       require     => Package['ca-certificates'],
     }
